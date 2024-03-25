@@ -52,7 +52,7 @@ body {
     align-items: center;
     height: 100%;
     width: 100%;
-    padding: 9rem;
+    position: absolute;
 }
 
 
@@ -61,6 +61,8 @@ body {
     border-radius: 50px;
     height: 500px;
     width: 900px;
+    justify-content: center;
+    align-items: center;
 }
 
 .header {
@@ -172,4 +174,27 @@ body {
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+
+
+@media screen and (max-width: 380px) {
+
+    body {
+        overflow: scroll;
+    }
+    
+    .weather-container {
+        width: 370px;
+    }
+
+    .weather-input {
+        width: 14rem;
+    }
+
+    .location,
+    .weather-input,
+    .search-button 
+    {
+        height: 4rem;
+    }
 }
