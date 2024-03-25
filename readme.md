@@ -1,1 +1,1 @@
-<h1>Building Weather App with JAVASCRIPT And Open weather Map APIS</h1>
+<h1>Building Weather App with JAVASCRIPT And Open weather Map API</h1>
