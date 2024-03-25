@@ -4,6 +4,14 @@
 :root {
     --bg-color: #596EE4ff;
     --poppins-font: poppins;
+    --weather-container-bg:#444948;
+    --text-color: #fff;
+}
+
+.dark-theme {
+    --bg-color: #444948;
+    --weather-container-bg:#596EE4ff;
+    --text-color: #fff;
 }
 
 * {
@@ -11,6 +19,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--poppins-font);
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
 }
 
 html {
@@ -19,4 +32,136 @@ html {
 
 body {
     background-color: var(--bg-color);
+    height: 100%;
+    width: 100%;
+    
+    overflow: hidden;
+    transition: all .3s ease;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.weather-box {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 9rem;
+}
+
+
+.weather-container {
+    background-color: var(--weather-container-bg);
+    border-radius: 50px;
+    height: 500px;
+    width: 900px;
+}
+
+.header {
+    justify-content: space-between;
+    position: relative;
+}
+
+.weather-icon,
+.theme
+ {
+    padding: .5rem;
+}
+
+
+
+.weather-icon-img {
+    width: 70px;
+}
+
+.theme {
+    margin-top: .7rem;
+}
+
+.theme-toggle {
+    font-size: 25px;
+    position: relative;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.theme-icons {
+    position: relative;
+}
+
+.dark__toggle,
+.light__toggle 
+{
+    right: 1rem;
+    position: absolute;
+    padding: .5rem;
+    display: flex;
+    width: max-content;
+    height: max-content;
+}
+
+.light__toggle {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.change-theme-icon .light__toggle{
+    opacity: 1;
+    visibility: visible;
+}
+
+.change-theme-icon .dark__toggle {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.weather-search {
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    margin-top: 1rem;
+    position: relative;
+    
+}
+
+.weather-search input, button {
+    padding: .5rem;
+    outline: none;
+    background-color: var(--bg-color);
+    border: none;
+}
+
+.location {
+    font-size: 25px;
+    color: var(--text-color);
+}
+
+.weather-input {
+    height: 3rem;
+    width: 20rem;
+    text-transform: uppercase;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 25px;
+    padding-left: .3rem;
+    border-radius: 5px;
+    position: relative;
+}
+
+.search-button {
+    cursor: pointer;
+    height: 3rem;
+    width: 3.5rem;
+    font-size: 25px;
+    background-color: var(--text-color);
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
