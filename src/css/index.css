@@ -262,6 +262,7 @@ input::placeholder
     .weather-container {
         width: 370px;
         height: 100%;
+        padding-bottom: 3rem;
     }
 
     .weather-input, 
