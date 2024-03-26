@@ -177,17 +177,22 @@ input::placeholder
     justify-content: center;
     align-items: center;
 }
+.weather-info-container {
+    justify-content: center;
+    align-items: center;
+}
 
 .weather-info {
     /* margin-top: .5rem; */
     justify-content: center;
     align-items: center;
+    position: relative;
     gap: 4rem;
 }
 
 
 .weather__info__img {
-    width: 30%;
+    width: 200px;
 }
 
 .weather-conditions {
@@ -195,14 +200,55 @@ input::placeholder
     position: relative;
 }
 
-.temp {
-    font-size: 35px;
-    font-weight: 300;
+.temp,
+.weather-codt,
+.weather-country
+{
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
-.weather__hum__img{
-    width: 10%;
+.temp {
+    font-size: 45px;
+    font-weight: 300;
+    color: var(--text-color);
 }
+
+.weather-codt,
+.weather-country {
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    text-align: center;
+}
+
+.condition-content {
+   align-items: center;
+   justify-content: center;
+   gap: 2rem;
+   margin-top: 1rem;
+   
+}
+
+.weather__hum__img {
+    width: 70px
+}
+
+.weather-condition-title-info {
+    margin-left: .5rem;
+}
+
+.humidity,
+.wind-info,
+.condition__text
+{
+    color: var(--text-color);
+}
+
+
+
 
 
 @media screen and (max-width: 380px) {
@@ -213,10 +259,15 @@ input::placeholder
     
     .weather-container {
         width: 370px;
+        height: 100%;
     }
 
-    .weather-input {
+    .weather-input, 
+    input::placeholder 
+    {
         width: 14rem;
+        font-size: 16px;
+        font-weight: 500;
     }
 
     .location,
@@ -228,5 +279,22 @@ input::placeholder
 
     input {
         padding: 0;
+    }
+
+    .weather-info {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .weather__info__img {
+        width: 150px;
+    }
+
+    .condition__text {
+        font-size: 15px;
+    }
+
+    .condition-content {
+        gap: 1rem;
     }
 }
