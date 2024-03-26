@@ -255,10 +255,10 @@ input::placeholder
 
 @media screen and (max-width: 380px) {
 
-    body {
+  /*   body {
         overflow: scroll;
     }
-
+ */
     .weather-search {
         margin-top: 0;
     }
