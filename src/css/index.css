@@ -258,6 +258,10 @@ input::placeholder
     body {
         overflow: scroll;
     }
+
+    .weather-search {
+        margin-top: 0;
+    }
     
     .weather-container {
         width: 370px;
@@ -290,7 +294,7 @@ input::placeholder
     }
 
     .weather__info__img {
-        width: 150px;
+        width: 120px;
     }
 
     .condition__text {
