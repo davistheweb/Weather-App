@@ -31,7 +31,7 @@ body {
     height: 100%;
     width: 100%;
     
-    /* overflow: hidden; */
+    overflow: hidden;
     transition: all .3s ease;
 }
 
@@ -163,6 +163,8 @@ input::placeholder
     font-size: 25px;
     border-radius: 5px;
     position: relative;
+    display: flex;
+    text-align: center;
 }
 
 .search-button {
