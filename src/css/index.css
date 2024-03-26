@@ -284,10 +284,7 @@ input::placeholder
     {
         height: 4rem;
     }
-
-    input {
-        padding: 0;
-    }
+    
 
     .weather-info {
         flex-direction: column;
