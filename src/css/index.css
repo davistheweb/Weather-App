@@ -274,6 +274,8 @@ input::placeholder
         font-weight: 500;
         height: 3rem;
         padding: .1rem;
+        display: flex;
+        text-align: left;
     }
 
     .location,
