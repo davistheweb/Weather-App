@@ -1,3 +1,20 @@
+// Title on Blur
+
+
+let title = document.title
+
+function inspectTitle () {
+    window.addEventListener('blur', () => {
+        document.title = "Come back 😃"
+    });
+
+    window.addEventListener('focus', () => {
+        document.title = "Weather | App"
+    })
+}
+
+inspectTitle()
+
 // DARK THEME
 
 
