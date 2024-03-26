@@ -50,3 +50,20 @@ darkTheme = () => {
 darkTheme();
 
 
+let country = {
+    state: "Imo",
+    town: "Owerri"
+}
+
+if(country.state === "Imo" && country.town === "Owerri") {
+    console.log("true")
+}
+
+let state = document.querySelector('.weather-country') 
+
+function changeStatetxt () {
+    state.textContent= country.town
+}
+
+changeStatetxt()
+
