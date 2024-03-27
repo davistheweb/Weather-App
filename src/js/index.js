@@ -49,10 +49,9 @@ darkTheme = () => {
 
 darkTheme();
 
-
+/* 
 let country = {
-    state: "Imo",
-    town: "Owerri"
+    state: "Imo", town: "Owerri"
 }
 
 if(country.state === "Imo" && country.town === "Owerri") {
@@ -67,3 +66,4 @@ function changeStatetxt () {
 
 changeStatetxt()
 
+ */
