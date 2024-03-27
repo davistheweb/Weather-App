@@ -11,6 +11,8 @@ async function loadWeather(City) {
     document.querySelector(".temp").textContent = Math.round(Weatherdata.main.temp) + "°C"
 
     document.querySelector('.humidity').textContent = Weatherdata.main.humidity + "%"
+    document.querySelector('.wind-info').textContent = Weatherdata.wind.speed + "km/h"
+    document.querySelector('.weather-codt').textContent = Weatherdata.weather.main
 
     console.log(Weatherdata)
 }
