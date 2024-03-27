@@ -10,7 +10,9 @@ async function loadWeather(City) {
     document.querySelector('.weather-country').textContent = Weatherdata.name;
     document.querySelector(".temp").textContent = Math.round(Weatherdata.main.temp) + "°C"
 
-    
+    document.querySelector('.humidity').textContent = Weatherdata.main.humidity + "%"
+
+    console.log(Weatherdata)
 }
 
 search_btn.addEventListener('click', () => {
