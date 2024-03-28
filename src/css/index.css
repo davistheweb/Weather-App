@@ -246,6 +246,31 @@ input::placeholder
     color: var(--text-color);
 }
 
+.error-location {
+    justify-content: center !important;
+    align-items: center;
+    margin-top: 2.5rem;
+    display: none;
+}
+
+
+
+.error-image {
+    width: 200px;
+    display: flex;
+    text-align: center;
+    justify-self: center;
+}
+
+.error-message {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.weather-info-container {
+    display: none;
+}
 
 
 
