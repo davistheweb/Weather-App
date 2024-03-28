@@ -281,7 +281,7 @@ input::placeholder
 .build-info {
     color: var(--text-color);
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 500;
     cursor: pointer;
 }
 
