@@ -25,8 +25,6 @@ async function loadWeather(City) {
     document.querySelector('.wind-info').textContent = Weatherdata.wind.speed + "km/h"
     document.querySelector('.weather-codt').textContent = Weatherdata.weather[0].main
 
-    console.log(Weatherdata)
-
     if (Weatherdata.weather[0].main == "Clouds") {
         weatherImage.src = "src/images/clouds.png"
     }

@@ -49,6 +49,16 @@ darkTheme = () => {
 
 darkTheme();
 
+const builder = "davistheweb";
+
+document.querySelector('.build-info').addEventListener('click', () => {
+        window.location.href = "https://x.com/davistheweb"
+    });
+
+
+document.querySelector('.build-info').innerHTML = "Copyright &copy;" +" " + new Date().getFullYear() + " " + "Built by" + ' ' + builder;
+
+
 /* 
 let country = {
     state: "Imo", town: "Owerri"

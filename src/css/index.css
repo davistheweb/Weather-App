@@ -272,7 +272,18 @@ input::placeholder
     display: none;
 }
 
+.footer {
+    position: absolute;
+    bottom: 15%;
+    left: 20%;
+} 
 
+.build-info {
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+}
 
 
 @media screen and (max-width: 380px) {
@@ -326,6 +337,15 @@ input::placeholder
 
     .condition-content {
         gap: 1rem;
+    }
+
+    .footer {
+        left:17%;
+        bottom: 12%;
+    }
+
+    .build-info {
+        font-size: 15px;
     }
 }
 
