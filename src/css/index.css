@@ -179,6 +179,20 @@ input::placeholder
 .weather-info-container {
     justify-content: center;
     align-items: center;
+    animation: weather forwards .7s ease-in;
+    animation-delay: 0.3s;
+}
+
+@keyframes weather {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .weather-info {
@@ -260,6 +274,20 @@ input::placeholder
     display: flex;
     text-align: center;
     justify-self: center;
+    animation:zoom forwards  2s ease;
+    animation-delay: 0.2;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }    
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .error-message {
@@ -283,6 +311,13 @@ input::placeholder
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
+}
+
+
+@media screen and (max-width: 330px) {
+    body{
+        display: none;
+    }
 }
 
 
@@ -395,6 +430,31 @@ input::placeholder
 
     .condition-content {
         gap: 1rem;
+    }
+
+    .footer {
+        left:17%;
+        bottom: 2%;
+    }
+
+    .build-info {
+        font-size: 12px;
+    }
+}
+
+
+
+@media screen and (min-width: 400px){
+
+    .weather-container {
+        width: 450px;
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+    .weather-container {
+        width: 650px;
     }
 }
 

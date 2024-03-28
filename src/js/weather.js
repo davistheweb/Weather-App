@@ -27,22 +27,27 @@ async function loadWeather(City) {
 
     if (Weatherdata.weather[0].main == "Clouds") {
         weatherImage.src = "src/images/clouds.png"
+        weatherImage.alt = "cloudy weather"
     }
 
     else if (Weatherdata.weather[0].main == "Clear") {
         weatherImage.src = "src/images/sunny.png"
+        weatherImage.alt = "clear weather"
     }
     
     else if (Weatherdata.weather[0].main == "Rain") {
         weatherImage.src = "src/images/rainy.png"
+        weatherImage.alt = "rainy weather"
     }
 
     else if (Weatherdata.weather[0].main == "Drizzle") {
         weatherImage.src = "src/images/drizzle.png"
+        weatherImage.alt = "drizzy weather"
     }
 
     else if (Weatherdata.weather[0].main == "Mist") {
         weatherImage.src = "src/images/mist.png"
+        weatherImage.alt = "mist"
     }
 
     errorLocation.style.display= "none"
