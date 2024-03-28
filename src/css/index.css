@@ -180,7 +180,6 @@ input::placeholder
     justify-content: center;
     align-items: center;
     animation: weather forwards .7s ease-in;
-    animation-delay: 0.3s;
 }
 
 @keyframes weather {
