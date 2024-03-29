@@ -54,7 +54,6 @@ body {
 
 .weather-container {
     background: var(--weather-container-bg);
-    border-radius: 50px;
     height: 500px;
     width: 900px;
     justify-content: center;
