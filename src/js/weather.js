@@ -53,6 +53,7 @@ async function loadWeather(City) {
     errorLocation.style.display= "none"
     weatherInfo.style.display = "block"
     }
+
     
 }
 

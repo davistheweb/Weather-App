@@ -51,11 +51,16 @@ body {
     position: absolute;
 }
 
-
+@media screen and (max-width: 600px) {
+    .weather-container {
+        border-radius: 0;
+    }
+}
 .weather-container {
     background: var(--weather-container-bg);
     height: 500px;
     width: 900px;
+    border-radius: 20px;
     justify-content: center;
     align-items: center;
 }
