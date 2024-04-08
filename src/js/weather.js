@@ -57,7 +57,13 @@ async function loadWeather(City) {
     
 }
 
+search_input.addEventListener('keydown', (keystroke) => {
+    if (keystroke.key === "Enter") {
+        loadWeather(search_input.value.trim());
+    }
+})
+
 search_btn.addEventListener('click', () => {
-    loadWeather(search_input.value);
+    loadWeather(search_input.value.trim());
 })
 
