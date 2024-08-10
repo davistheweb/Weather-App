@@ -4,7 +4,8 @@ const Weatherapi_key = "6b7f9e185eb663f62a87135fb27ea932",
         search_btn = document.querySelector('.search-button'),
         weatherImage = document.querySelector('.weather__info__img'),
         weatherInfo = document.querySelector('.weather-info-container'),
-        errorLocation = document.querySelector('.error-location')
+        errorLocation = document.querySelector('.error-location'),
+        errormessageUnk = document.querySelector('.error-messageUn')
     
 async function loadWeather(City) {
     const rspd = await fetch(weatherApi_url + City + `&appid=${Weatherapi_key}`);
@@ -13,6 +14,7 @@ async function loadWeather(City) {
         errorLocation.style.display= "grid"
         errorLocation.style.justifyContent = "center"
         weatherInfo.style.display = "none"
+        errormessageUnk.textContent = `${search_input.value.toUpperCase()} not found!`
     }
 
     else {

@@ -13,14 +13,8 @@
     --weather-container-bg:linear-gradient(to bottom right, #fff, #444948);
     --text-color: #fff;
 }
-.dark-themeIcon .light__toggle{
-    opacity: 1;
-    visibility: visible;
-}
-.dark-themeIconC .dark__toggle {
-    opacity: 0;
-    visibility: hidden;
-}
+
+
 
 
 
@@ -307,6 +301,12 @@ input::placeholder
     color: var(--text-color);
     font-weight: 600;
     font-size: 20px;
+}
+.error-messageUn{
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
 }
 
 .weather-info-container {
