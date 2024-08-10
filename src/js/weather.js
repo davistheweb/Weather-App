@@ -18,7 +18,7 @@ async function loadWeather(City) {
     else {
         var Weatherdata = await rspd.json();
 
-    document.querySelector('.weather-country').textContent = Weatherdata.name;
+    document.querySelector('.weather-country').textContent = Weatherdata.name.toUpperCase();
     document.querySelector(".temp").textContent = Math.round(Weatherdata.main.temp) + "°C"
 
     document.querySelector('.humidity').textContent = Weatherdata.main.humidity + "%"
