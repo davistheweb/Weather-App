@@ -32,9 +32,9 @@ darkTheme = () => {
     }
    const setThemeIcon = (isDarkThemeIcon) => {
         if (isDarkThemeIcon) {
-            document.body.classList.toggle('light__toggle');
+            document.body.classList.toggle('change-theme-icon .light__toggle');
         } else {
-            document.body.classList.toggle('light__toggle');
+            document.body.classList.toggle('change-theme-icon .light__toggle');
         }
     }
 
