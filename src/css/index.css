@@ -13,6 +13,15 @@
     --weather-container-bg:linear-gradient(to bottom right, #fff, #444948);
     --text-color: #fff;
 }
+.dark-theme .light__toggle{
+    opacity: 1;
+    visibility: visible;
+}
+
+.dark-theme .dark__toggle {
+    opacity: 0;
+    visibility: hidden;
+}
 
 * {
     margin: 0;
