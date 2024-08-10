@@ -30,7 +30,16 @@ darkTheme = () => {
             document.body.classList.remove('dark-theme');
         }
     }
+   const setThemeIcon = (isDarkThemeIcon) => {
+        if (isDarkThemeIcon) {
+            document.body.classList.add('change-theme-icon');
+        } else {
+            document.body.classList.remove('change-theme-icon');
+        }
+    }
 
+    const isDarkThemeIcon = localStorage.getItem('darkTheme') === 'true';
+    setTheme(isDarkThemeIcon);
     // Check if there's a theme preference in localStorage
     const isDarkTheme = localStorage.getItem('darkTheme') === 'true';
     setTheme(isDarkTheme);
@@ -43,7 +52,8 @@ darkTheme = () => {
 
     // Event listener for toggling theme icon
     themeIcon.addEventListener('click', () => {
-        document.body.classList.toggle('change-theme-icon');
+        const StoreThemeIcon = document.body.classList.toggle('change-theme-icon');
+        localStorage.setItem('darkTheme', StoreThemeIcon);
     });
 }
 
