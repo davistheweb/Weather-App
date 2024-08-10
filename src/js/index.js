@@ -27,10 +27,13 @@ darkTheme = () => {
         if (isDarkTheme) {
             document.body.classList.add('dark-theme');
             document.body.classList.add('dark-themeIcon');
+            document.body.classList.add('dark-themeIconC');
             //.dark-themeIcon
+            //dark-themeIconC
         } else {
             document.body.classList.remove('dark-theme');
             document.body.classList.remove('dark-themeIcon');
+            document.body.classList.remove('dark-themeIconC');
         }
     }
    /*const setThemeIcon = (isDarkThemeIcon) => {
