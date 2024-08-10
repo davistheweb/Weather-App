@@ -19,20 +19,17 @@ inspectTitle()
 
 
 darkTheme = () => {
-    let theme = document.getElementById('theme'),
-        themeIcon = document.querySelector('.theme-icons')
+    let theme = document.getElementById('theme')
 
     // Function to set the theme
     const setTheme = (isDarkTheme) => {
         if (isDarkTheme) {
             document.body.classList.add('dark-theme');
-            //document.body.classList.add('dark-themeIcon');
-            //document.body.classList.add('dark-themeIconC');
+   
     
         } else {
             document.body.classList.remove('dark-theme');
-            //document.body.classList.remove('dark-themeIcon');
-            //document.body.classList.remove('dark-themeIconC');
+        
         }
     }
 
@@ -46,10 +43,6 @@ darkTheme = () => {
         localStorage.setItem('darkTheme', isDark);
     });
 
-    // Event listener for toggling theme icon
-    themeIcon.addEventListener('click', () => {
-            document.body.classList.toggle('change-theme-icon');
-    });
 }
 
 darkTheme();

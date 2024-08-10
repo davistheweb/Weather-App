@@ -6,12 +6,20 @@
     --poppins-font: poppins;
     --weather-container-bg:linear-gradient(to bottom right, #fff, #596EE4ff);
     --text-color: #fff;
+    --theme-icon-opacity-dark: 1;
+    --theme-icon-visibility-dark:visible;
+    --theme-icon-opacity-light: 0;
+    --theme-icon-visibility-light:hidden;
 }
 
 .dark-theme {
     --bg-color: #444948;
     --weather-container-bg:linear-gradient(to bottom right, #fff, #444948);
     --text-color: #fff;
+    --theme-icon-opacity-dark:0;
+    --theme-icon-visibility-dark:hidden;
+    --theme-icon-opacity-light: 1;
+    --theme-icon-visibility-light:visible;
 }
 
 
@@ -118,11 +126,15 @@ body {
 }
 
 .light__toggle {
-    opacity: 0;
-    visibility: hidden;
+    opacity: var(--theme-icon-opacity-light);
+    visibility: (var(--theme-icon-visibility-light));
+}
+.dark__toggle {
+    opacity: var(--theme-icon-opacity-dark);
+    visibility:var(--theme-icon-visibility-dark);
 }
 
-.change-theme-icon .light__toggle{
+/* .change-theme-icon .light__toggle{
     opacity: 1;
     visibility: visible;
 }
@@ -130,7 +142,7 @@ body {
 .change-theme-icon .dark__toggle {
     opacity: 0;
     visibility: hidden;
-}
+} */
 
 .weather-search {
     justify-content: center;
