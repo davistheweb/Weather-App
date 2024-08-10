@@ -17,7 +17,7 @@
     opacity: 1;
     visibility: visible;
 }
-.dark-themeIcon .dark__toggle {
+.dark-themeIconC .dark__toggle {
     opacity: 0;
     visibility: hidden;
 }
