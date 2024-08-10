@@ -18,10 +18,7 @@
     visibility: visible;
 }
 
-.dark-theme .dark__toggle {
-    opacity: 0;
-    visibility: hidden;
-}
+
 
 * {
     margin: 0;
