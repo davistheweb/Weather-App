@@ -26,20 +26,23 @@ darkTheme = () => {
     const setTheme = (isDarkTheme) => {
         if (isDarkTheme) {
             document.body.classList.add('dark-theme');
+            document.body.classList.add('dark-themeIcon');
+            //.dark-themeIcon
         } else {
             document.body.classList.remove('dark-theme');
+            document.body.classList.remove('dark-themeIcon');
         }
     }
-   const setThemeIcon = (isDarkThemeIcon) => {
+   /*const setThemeIcon = (isDarkThemeIcon) => {
         if (isDarkThemeIcon) {
             document.body.classList.toggle('change-theme-icon .light__toggle');
         } else {
             document.body.classList.toggle('change-theme-icon .light__toggle');
         }
-    }
+    }*/
 
-    const isDarkThemeIcon = localStorage.getItem('darkTheme') === 'true';
-    setTheme(isDarkThemeIcon);
+    //const isDarkThemeIcon = localStorage.getItem('darkTheme') === 'true';
+    //setTheme(isDarkThemeIcon);
     // Check if there's a theme preference in localStorage
     const isDarkTheme = localStorage.getItem('darkTheme') === 'true';
     setTheme(isDarkTheme);
@@ -52,8 +55,9 @@ darkTheme = () => {
 
     // Event listener for toggling theme icon
     themeIcon.addEventListener('click', () => {
-        const StoreThemeIcon = document.body.classList.toggle('change-theme-icon');
-        localStorage.setItem('darkTheme', StoreThemeIcon);
+        //const StoreThemeIcon = 
+        document.body.classList.toggle('change-theme-icon');
+        //localStorage.setItem('darkTheme', StoreThemeIcon);
     });
 }
 
