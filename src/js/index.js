@@ -59,7 +59,7 @@ darkTheme = () => {
     // Event listener for toggling theme icon
     themeIcon.addEventListener('click', () => {
         //const StoreThemeIcon = 
-        if(document.body.classList.contains("dark-themeIconC"){
+        if(document.body.classList.contains("dark-themeIconC")){
             document.body.classList.toggle('change-theme-icon');
         }
         
