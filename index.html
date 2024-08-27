@@ -11,6 +11,12 @@
     href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
     rel="stylesheet"
 />
+    <script>
+        // Immediately apply the preferred theme before the page loads
+        if (localStorage.getItem('darkTheme') === 'true') {
+            document.documentElement.classList.add('dark-theme');
+        }
+    </script>
     <title>Weather | App</title>
 </head>
 <body>
