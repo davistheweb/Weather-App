@@ -12,7 +12,7 @@
     --theme-icon-visibility-light:hidden;
 }
 
-.dark-theme {
+body.dark-theme {
     --bg-color: #444948;
     --weather-container-bg:linear-gradient(to bottom right, #fff, #444948);
     --text-color: #fff;
