@@ -14,7 +14,53 @@
     <title>Weather | App</title>
 </head>
 <body>
+    <style>
+        :root {
+    --bg-color: #596EE4ff;
+    --poppins-font: poppins;
+    --weather-container-bg:linear-gradient(to bottom right, #fff, #596EE4ff);
+    --text-color: #fff;
+    --theme-icon-opacity-dark: 1;
+    --theme-icon-visibility-dark:visible;
+    --theme-icon-opacity-light: 0;
+    --theme-icon-visibility-light:hidden;
+}
+
+body.dark-theme {
+    --bg-color: #444948;
+    --weather-container-bg:linear-gradient(to bottom right, #fff, #444948);
+    --text-color: #fff;
+    --theme-icon-opacity-dark:0;
+    --theme-icon-visibility-dark:hidden;
+    --theme-icon-opacity-light: 1;
+    --theme-icon-visibility-light:visible;
+}
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--poppins-font);
+   
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    height: 100%;
+    width: 100%;
     
+    overflow: hidden;
+     transition: all .3s ease;
+}
+    </style>
     <div class="weather-box flex">
         <div class="weather-container">
             <div class="header flex">
