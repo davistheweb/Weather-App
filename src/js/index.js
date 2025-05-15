@@ -42,12 +42,13 @@ const darkTheme = () => {
 
 darkTheme();
 
-const builder = "davistheweb";
+function setBuildInfo(builder = "davistheweb") {
+  const buildInfo = document.querySelector(".build-info");
 
-document.querySelector(".build-info").addEventListener("click", () => {
-  window.location.href = "https://x.com/davistheweb";
-});
+  buildInfo.innerHTML = `Copyright &copy; ${new Date().getFullYear()} Built by ${builder}`;
+  buildInfo.addEventListener("click", () => {
+    window.location.href = "https://x.com/davistheweb";
+  });
+}
 
-document.querySelector(
-  ".build-info"
-).innerHTML = `Copyright &copy; ${new Date().getFullYear()} Built by ${builder}`;
+setBuildInfo();
