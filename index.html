@@ -1,140 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="src/images/weather.png">
-    
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="src/images/weather.png" />
+
     <!-- CSS -->
-    <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/index.css" />
     <!-- REMIX ICONS -->
     <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
     <title>Weather | App</title>
-</head>
-<body>
+  </head>
+  <body>
     <style>
-        :root {
-    --bg-color: #596EE4ff;
-    --poppins-font: poppins;
-    --weather-container-bg:linear-gradient(to bottom right, #fff, #596EE4ff);
-    --text-color: #fff;
-    --theme-icon-opacity-dark: 1;
-    --theme-icon-visibility-dark:visible;
-    --theme-icon-opacity-light: 0;
-    --theme-icon-visibility-light:hidden;
-}
+      :root {
+        --bg-color: #596ee4ff;
+        --poppins-font: poppins;
+        --weather-container-bg: linear-gradient(
+          to bottom right,
+          #fff,
+          #596ee4ff
+        );
+        --text-color: #fff;
+        --theme-icon-opacity-dark: 1;
+        --theme-icon-visibility-dark: visible;
+        --theme-icon-opacity-light: 0;
+        --theme-icon-visibility-light: hidden;
+      }
 
-body.dark-theme {
-    --bg-color: #444948;
-    --weather-container-bg:linear-gradient(to bottom right, #fff, #444948);
-    --text-color: #fff;
-    --theme-icon-opacity-dark:0;
-    --theme-icon-visibility-dark:hidden;
-    --theme-icon-opacity-light: 1;
-    --theme-icon-visibility-light:visible;
-}
+      body.dark-theme {
+        --bg-color: #444948;
+        --weather-container-bg: linear-gradient(to bottom right, #fff, #444948);
+        --text-color: #fff;
+        --theme-icon-opacity-dark: 0;
+        --theme-icon-visibility-dark: hidden;
+        --theme-icon-opacity-light: 1;
+        --theme-icon-visibility-light: visible;
+      }
 
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: var(--poppins-font);
+      }
 
+      html {
+        scroll-behavior: smooth;
+      }
 
+      body {
+        background-color: var(--bg-color);
+        height: 100%;
+        width: 100%;
 
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--poppins-font);
-   
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: var(--bg-color);
-    height: 100%;
-    width: 100%;
-    
-    overflow: hidden;
-     transition: all .3s ease;
-}
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
     </style>
     <div class="weather-box flex">
-        <div class="weather-container">
-            <div class="header flex">
-                <div class="weather-icon">
-                    <img class="weather-icon-img" src="src/images/weather.png" alt="">
-                </div>
-                <div class="theme" id="theme">
-                    <div class="theme-icons">
-                    <span class="theme-toggle dark__toggle">
-                        <i class="ri-moon-line"></i>
-                    </span>
-                    <span class="theme-toggle light__toggle">
-                        <i class="ri-sun-line"></i>
-                    </span>
-                </div>
-                </div>
+      <div class="weather-container">
+        <div class="header flex">
+          <div class="weather-icon">
+            <img class="weather-icon-img" src="src/images/weather.png" alt="" />
+          </div>
+          <div class="theme" id="theme">
+            <div class="theme-icons">
+              <span class="theme-toggle dark__toggle">
+                <i class="ri-moon-line"></i>
+              </span>
+              <span class="theme-toggle light__toggle">
+                <i class="ri-sun-line"></i>
+              </span>
             </div>
-
-            <div class="weather-search flex">
-                <span class="location flex">
-                    <i class="ri-map-pin-fill"></i>
-                </span>
-                <input class="weather-input" type="text" placeholder="Enter your location">
-                <button class="search-button flex"><i class="ri-search-2-line"></i></button>
-            </div>
-
-            <div class="error-location grid">
-                <img src="src/images/404.png" alt="" class="error-image">
-                <p class="error-message">Opps, Invalid Location!</p>
-                <p class="error-messageUn"></p>
-            </div>
-            <div class="weather-info-container flex">
-            <div class="weather-info flex">
-                <img src="src/images/unknown.png"  alt="unknown" class="weather__info__img flex">
-                <div class="weather-conditions">
-                    <h1 class="temp">_</h1>
-                    <p class="weather-codt">_</p>
-                    <p class="weather-country">_</p>
-
-                    <div class="condition-content flex">
-    
-                    <div class="weather-condition-info flex">
-                            <img src="src/images/humidity.png" alt="" class="weather__hum__img">
-                        <div class="weather-condition-title-info">
-                            <p class="humidity">_</p>
-                            <p class="condition__text">Humidity</p>
-                        </div>
-                    </div>
-               
-               
-                    <div class="weather-condition-info flex">
-                            <img src="src/images/wind.png" alt="" class="weather__hum__img">
-                        <div class="weather-condition-title-info">
-                            <p class="wind-info">_?</p>
-                            <p class="condition__text">Wind Speed</p>
-                        </div>
-                    </div>
-                </div>
-          
-                </div>
-            </div>
-            </div>
-            <div class="footer">
-                <a class="build-info" target="_blank"></a>
-            </div>
+          </div>
         </div>
+
+        <div class="weather-search flex">
+          <span class="location flex">
+            <i class="ri-map-pin-fill"></i>
+          </span>
+          <input
+            class="weather-input"
+            type="text"
+            placeholder="Enter your location"
+          />
+          <button class="search-button flex">
+            <i class="ri-search-2-line"></i>
+          </button>
+        </div>
+
+        <div class="error-location grid">
+          <img src="src/images/404.png" alt="" class="error-image" />
+          <p class="error-message">Opps, Invalid Location!</p>
+          <p class="error-messageUn"></p>
+        </div>
+        <div class="weather-info-container flex">
+          <div class="weather-info flex">
+            <img
+              src="src/images/unknown.png"
+              alt="unknown"
+              class="weather__info__img flex"
+            />
+            <div class="weather-conditions">
+              <h1 class="temp">_</h1>
+              <p class="weather-codt">_</p>
+              <p class="weather-country">_</p>
+
+              <div class="condition-content flex">
+                <div class="weather-condition-info flex">
+                  <img
+                    src="src/images/humidity.png"
+                    alt=""
+                    class="weather__hum__img"
+                  />
+                  <div class="weather-condition-title-info">
+                    <p class="humidity">_</p>
+                    <p class="condition__text">Humidity</p>
+                  </div>
+                </div>
+
+                <div class="weather-condition-info flex">
+                  <img
+                    src="src/images/wind.png"
+                    alt=""
+                    class="weather__hum__img"
+                  />
+                  <div class="weather-condition-title-info">
+                    <p class="wind-info">_?</p>
+                    <p class="condition__text">Wind Speed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <a class="build-info" target="_blank"></a>
+        </div>
+      </div>
     </div>
 
-
-<!--WEATHER JS-->
+    <!--WEATHER JS-->
     <script src="src/js/index.js"></script>
-<script src="src/js/weather.js"></script>
-</body>
+    <script src="src/js/weather.js"></script>
+  </body>
 </html>
